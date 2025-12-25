@@ -1,0 +1,3 @@
+`email_header_analyzer.py` analyzes a saved email header text file and prints a quick triage report (SPF/DKIM signals, DMARC publication status, TLS hints, and a basic From vs Return-Path alignment check). It’s designed for fast investigation support, not forensic proof.
+
+**Inputs:** full email headers saved to a `.txt` file. **Outputs:** console report. **Run:** `python email_header_analyzer.py -i header.txt`. **Known limitations:** header formats vary; results are heuristic unless `Authentication-Results` is present and consistent. **Safety:** no auto-install/upgrade; run in a virtual environment and avoid using real sensitive headers in shared environments.
