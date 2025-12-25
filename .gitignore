@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Outputs
+*.csv
+*.xlsx
+*.docx
+*.pdf
+*.log
+output/
+outputs/
+network_connections.csv
+md5_hash_output.txt
+hash_validation_instructions.txt
