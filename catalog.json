@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2025-12-25T12:52:58.568069+00:00",
+  "generated_from": {
+    "repo": "https://github.com/sachmehta2/pythonencounters",
+    "branch": "main",
+    "source_zip": "pythonencounters-main.zip"
+  },
+  "buckets": [
+    {
+      "id": "grc-tech",
+      "label": "GRC-Tech",
+      "repo_path": "grc-tech",
+      "site_path": "/python-encounters/grc-tech/"
+    },
+    {
+      "id": "user-tech",
+      "label": "User-Tech",
+      "repo_path": "user-tech",
+      "site_path": "/python-encounters/user-tech/"
+    },
+    {
+      "id": "financial",
+      "label": "Financial Encounters",
+      "repo_path": "fin-tech",
+      "site_path": "/python-encounters/financial/"
+    }
+  ],
+  "requirements": [
+    {
+      "bucket": "grc-tech",
+      "path": "grc-tech/requirements.txt"
+    },
+    {
+      "bucket": "user-tech",
+      "path": "user-tech/requirements.txt"
+    },
+    {
+      "bucket": "financial",
+      "path": "fin-tech/requirements.txt"
+    }
+  ],
+  "encounters": [
+    {
+      "slug": "alphavantage-income-batch",
+      "bucket": "financial",
+      "title": "Alpha Vantage Income Batch",
+      "summary": "combine_inc_stmt.py batch-downloads annual income statements from Alpha Vantage for tickers listed in a text file and consolidates results into a single CSV.",
+      "repo_path": "fin-tech/alphavantage-income-batch",
+      "readme": "fin-tech/alphavantage-income-batch/README.md",
+      "primary_file": "fin-tech/alphavantage-income-batch/combine_inc_stmt.py",
+      "tags": [],
+      "status": "active"
+    },
+    {
+      "slug": "nse-ticker-list",
+      "bucket": "financial",
+      "title": "NSE Ticker List",
+      "summary": "nsepy_list.py exports a snapshot of NSE tickers with company names using nsepy, producing a dated CSV.",
+      "repo_path": "fin-tech/nse-ticker-list",
+      "readme": "fin-tech/nse-ticker-list/README.md",
+      "primary_file": "fin-tech/nse-ticker-list/nsepy_list.py",
+      "tags": [],
+      "status": "active"
+    },
+    {
+      "slug": "screener-profitloss-export",
+      "bucket": "financial",
+      "title": "Screener Profit/Loss Export",
+      "summary": "screener.py scrapes the Profit & Loss table from Screener.in for an NSE company and exports it as CSV to avoid manual copy/paste.",
+      "repo_path": "fin-tech/screener-profitloss-export",
+      "readme": "fin-tech/screener-profitloss-export/README.md",
+      "primary_file": "fin-tech/screener-profitloss-export/screener.py",
+      "tags": [],
+      "status": "active"
+    },
+    {
+      "slug": "yfinance-export",
+      "bucket": "financial",
+      "title": "yfinance Export",
+      "summary": "yf_invest.py downloads historical daily OHLCV price data using Yahoo Finance (yfinance) for a ticker and lookback period (years), then exports a clean CSV.",
+      "repo_path": "fin-tech/yfinance-export",
+      "readme": "fin-tech/yfinance-export/README.md",
+      "primary_file": "fin-tech/yfinance-export/yf_invest.py",
+      "tags": [],
+      "status": "active"
+    },
+    {
+      "slug": "email-header-analyzer",
+      "bucket": "grc-tech",
+      "title": "Email Header Analyzer",
+      "summary": "email_header_analyzer.py analyzes a saved email header text file and prints a quick triage report (SPF/DKIM signals, DMARC publication status, TLS hints, and a basic From vs Return-Path alignment check). It’s…",
+      "repo_path": "grc-tech/email-header-analyzer",
+      "readme": "grc-tech/email-header-analyzer/README.md",
+      "primary_file": "grc-tech/email-header-analyzer/email_header_analyzer.py",
+      "tags": [],
+      "status": "active"
+    },
+    {
+      "slug": "file-hash-md5",
+      "bucket": "grc-tech",
+      "title": "File Hash MD5",
+      "summary": "generate_md5_hash.py computes the MD5 hash for a chosen file and writes the hash plus validation instructions to text outputs. It’s a practical integrity receipt for routine file sharing.",
+      "repo_path": "grc-tech/file-hash-md5",
+      "readme": "grc-tech/file-hash-md5/README.md",
+      "primary_file": "grc-tech/file-hash-md5/generate_md5_hash.py",
+      "tags": [],
+      "status": "active"
+    },
+    {
+      "slug": "net-monitor",
+      "bucket": "grc-tech",
+      "title": "Net Monitor",
+      "summary": "netmon.py captures local active network connections, enriches them with process context where available, prints a live view, and appends results to a CSV for lightweight evidence capture and troubleshooting.",
+      "repo_path": "grc-tech/net-monitor",
+      "readme": "grc-tech/net-monitor/README.md",
+      "primary_file": "grc-tech/net-monitor/netmon.py",
+      "tags": [],
+      "status": "active"
+    },
+    {
+      "slug": "ssl-cert-check",
+      "bucket": "grc-tech",
+      "title": "SSL Cert Check",
+      "summary": "SSLcert.py retrieves and displays SSL/TLS certificate metadata (subject/issuer/SAN/expiry) for a hostname. It is intentionally inspection-only and does not claim to enumerate supported TLS versions/ciphers.",
+      "repo_path": "grc-tech/ssl-cert-check",
+      "readme": "grc-tech/ssl-cert-check/README.md",
+      "primary_file": "grc-tech/ssl-cert-check/SSLcert.py",
+      "tags": [],
+      "status": "active"
+    },
+    {
+      "slug": "pst-to-eml",
+      "bucket": "user-tech",
+      "title": "PST To EML",
+      "summary": "pst_to_eml.py converts an Outlook PST archive into .eml files (with attachments) using the external readpst tool, then converts extracted MBOX content into an EML folder tree.",
+      "repo_path": "user-tech/pst-to-eml",
+      "readme": "user-tech/pst-to-eml/README.md",
+      "primary_file": "user-tech/pst-to-eml/pst_to_eml.py",
+      "tags": [],
+      "status": "active"
+    },
+    {
+      "slug": "url-crawl-to-docx",
+      "bucket": "user-tech",
+      "title": "Url Crawl To DOCX",
+      "summary": "url_crawl.py crawls a website (same-domain links) and exports extracted page text into a Word document with a section per URL. Guardrails are included to prevent runaway crawls.",
+      "repo_path": "user-tech/url-crawl-to-docx",
+      "readme": "user-tech/url-crawl-to-docx/README.md",
+      "primary_file": "user-tech/url-crawl-to-docx/url_crawl.py",
+      "tags": [],
+      "status": "active"
+    }
+  ]
+}
