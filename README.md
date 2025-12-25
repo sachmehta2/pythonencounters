@@ -1,4 +1,5 @@
 # pythonencounters (curated)
+Last curated on: 2025-12-25
 
 A small, curated set of Python utilities grouped by domain:
 
