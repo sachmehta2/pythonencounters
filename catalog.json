@@ -1,155 +1,312 @@
 {
-  "schema_version": "1.0",
-  "generated_at": "2025-12-25T12:52:58.568069+00:00",
-  "generated_from": {
-    "repo": "https://github.com/sachmehta2/pythonencounters",
-    "branch": "main",
-    "source_zip": "pythonencounters-main.zip"
-  },
-  "buckets": [
+  "last_updated": "2026-03-03",
+  "total_scripts": 15,
+  "scripts": [
     {
-      "id": "grc-tech",
-      "label": "GRC-Tech",
-      "repo_path": "grc-tech",
-      "site_path": "/python-encounters/grc-tech/"
+      "id": "grc-ssl-cert-check",
+      "name": "SSL Cert Check",
+      "file": "SSLcert.py",
+      "folder": "grc-tech/ssl-cert-check",
+      "domain": "grc-tech",
+      "summary": "Retrieve and inspect SSL/TLS certificate metadata for a hostname",
+      "dependencies": [
+        "stdlib only"
+      ],
+      "page": "https://rtapulse.com/python-encounters/grc-tech/ssl-cert-check/",
+      "frameworks": [
+        "NIST CSF",
+        "ISO 27001",
+        "PCI DSS",
+        "FFIEC CAT",
+        "DORA"
+      ]
     },
     {
-      "id": "user-tech",
-      "label": "User-Tech",
-      "repo_path": "user-tech",
-      "site_path": "/python-encounters/user-tech/"
+      "id": "grc-net-monitor",
+      "name": "Net Monitor",
+      "file": "netmon.py",
+      "folder": "grc-tech/net-monitor",
+      "domain": "grc-tech",
+      "summary": "Capture active network connections with process context, export to CSV",
+      "dependencies": [
+        "psutil"
+      ],
+      "page": "https://rtapulse.com/python-encounters/grc-tech/net-monitor/",
+      "frameworks": [
+        "NIST CSF",
+        "ISO 27001",
+        "PCI DSS",
+        "FFIEC CAT",
+        "DORA",
+        "CIS Controls"
+      ]
     },
     {
-      "id": "financial",
-      "label": "Financial Encounters",
-      "repo_path": "fin-tech",
-      "site_path": "/python-encounters/financial/"
-    }
-  ],
-  "requirements": [
-    {
-      "bucket": "grc-tech",
-      "path": "grc-tech/requirements.txt"
+      "id": "grc-file-hash-md5",
+      "name": "File Hash MD5",
+      "file": "generate_md5_hash.py",
+      "folder": "grc-tech/file-hash-md5",
+      "domain": "grc-tech",
+      "summary": "Compute MD5 hash of a file and write integrity receipt outputs",
+      "dependencies": [
+        "stdlib only"
+      ],
+      "page": "https://rtapulse.com/python-encounters/grc-tech/file-hash-md5/",
+      "frameworks": [
+        "ISO 27001",
+        "SOX ITGC",
+        "PCI DSS",
+        "NIST CSF",
+        "CIS Controls",
+        "DORA"
+      ]
     },
     {
-      "bucket": "user-tech",
-      "path": "user-tech/requirements.txt"
+      "id": "grc-email-header-analyzer",
+      "name": "Email Header Analyzer",
+      "file": "email_header_analyzer.py",
+      "folder": "grc-tech/email-header-analyzer",
+      "domain": "grc-tech",
+      "summary": "Analyse email headers for SPF/DKIM/DMARC signals, TLS hints, and From alignment",
+      "dependencies": [
+        "dnspython"
+      ],
+      "page": "https://rtapulse.com/python-encounters/grc-tech/email-header-analyzer/",
+      "frameworks": [
+        "DORA",
+        "NIST CSF",
+        "ISO 27001",
+        "PCI DSS",
+        "FFIEC CAT",
+        "CIS Controls"
+      ]
     },
     {
-      "bucket": "financial",
-      "path": "fin-tech/requirements.txt"
-    }
-  ],
-  "encounters": [
-    {
-      "slug": "alphavantage-income-batch",
-      "bucket": "financial",
-      "title": "Alpha Vantage Income Batch",
-      "summary": "combine_inc_stmt.py batch-downloads annual income statements from Alpha Vantage for tickers listed in a text file and consolidates results into a single CSV.",
-      "repo_path": "fin-tech/alphavantage-income-batch",
-      "readme": "fin-tech/alphavantage-income-batch/README.md",
-      "primary_file": "fin-tech/alphavantage-income-batch/combine_inc_stmt.py",
-      "tags": [],
-      "status": "active"
+      "id": "grc-aws-01-root-mfa",
+      "name": "AWS-01: Root Account MFA",
+      "file": "aws_01_root_mfa.py",
+      "folder": "grc-tech/control-testing/aws-iam-programme",
+      "domain": "grc-tech/control-testing",
+      "summary": "Check whether MFA is enabled on the AWS root account. CIS AWS 1.4.",
+      "dependencies": [
+        "boto3"
+      ],
+      "page": "https://rtapulse.com/python-encounters/control-testing/aws-root-mfa/",
+      "frameworks": [
+        "NIST CSF",
+        "SOX ITGC",
+        "PCI DSS",
+        "ISO 27001",
+        "FFIEC CAT",
+        "DORA"
+      ]
     },
     {
-      "slug": "nse-ticker-list",
-      "bucket": "financial",
-      "title": "NSE Ticker List",
-      "summary": "nsepy_list.py exports a snapshot of NSE tickers with company names using nsepy, producing a dated CSV.",
-      "repo_path": "fin-tech/nse-ticker-list",
-      "readme": "fin-tech/nse-ticker-list/README.md",
-      "primary_file": "fin-tech/nse-ticker-list/nsepy_list.py",
-      "tags": [],
-      "status": "active"
+      "id": "grc-aws-02-root-access-keys",
+      "name": "AWS-02: Root Account Access Keys",
+      "file": "aws_02_root_access_keys.py",
+      "folder": "grc-tech/control-testing/aws-iam-programme",
+      "domain": "grc-tech/control-testing",
+      "summary": "Detect access keys on the AWS root account. CIS AWS 1.12.",
+      "dependencies": [
+        "boto3"
+      ],
+      "page": "https://rtapulse.com/python-encounters/control-testing/aws-root-access-keys/",
+      "frameworks": [
+        "NIST CSF",
+        "SOX ITGC",
+        "PCI DSS",
+        "ISO 27001",
+        "FFIEC CAT",
+        "DORA"
+      ]
     },
     {
-      "slug": "screener-profitloss-export",
-      "bucket": "financial",
-      "title": "Screener Profit/Loss Export",
-      "summary": "screener.py scrapes the Profit & Loss table from Screener.in for an NSE company and exports it as CSV to avoid manual copy/paste.",
-      "repo_path": "fin-tech/screener-profitloss-export",
-      "readme": "fin-tech/screener-profitloss-export/README.md",
-      "primary_file": "fin-tech/screener-profitloss-export/screener.py",
-      "tags": [],
-      "status": "active"
+      "id": "grc-aws-03-iam-password-policy",
+      "name": "AWS-03: IAM Password Policy",
+      "file": "aws_03_iam_password_policy.py",
+      "folder": "grc-tech/control-testing/aws-iam-programme",
+      "domain": "grc-tech/control-testing",
+      "summary": "Audit the IAM password policy against 7 CIS sub-checks. CIS AWS 1.8-1.11.",
+      "dependencies": [
+        "boto3"
+      ],
+      "page": "https://rtapulse.com/python-encounters/control-testing/aws-iam-password-policy/",
+      "frameworks": [
+        "NIST CSF",
+        "SOX ITGC",
+        "PCI DSS",
+        "ISO 27001",
+        "FFIEC CAT",
+        "HIPAA"
+      ]
     },
     {
-      "slug": "yfinance-export",
-      "bucket": "financial",
-      "title": "yfinance Export",
-      "summary": "yf_invest.py downloads historical daily OHLCV price data using Yahoo Finance (yfinance) for a ticker and lookback period (years), then exports a clean CSV.",
-      "repo_path": "fin-tech/yfinance-export",
-      "readme": "fin-tech/yfinance-export/README.md",
-      "primary_file": "fin-tech/yfinance-export/yf_invest.py",
-      "tags": [],
-      "status": "active"
+      "id": "grc-aws-04-inactive-iam-users",
+      "name": "AWS-04: Inactive IAM Users",
+      "file": "aws_04_inactive_iam_users.py",
+      "folder": "grc-tech/control-testing/aws-iam-programme",
+      "domain": "grc-tech/control-testing",
+      "summary": "Identify IAM users inactive for more than 90 days. CIS AWS 1.15.",
+      "dependencies": [
+        "boto3"
+      ],
+      "page": "https://rtapulse.com/python-encounters/control-testing/aws-inactive-iam-users/",
+      "frameworks": [
+        "NIST CSF",
+        "SOX ITGC",
+        "PCI DSS",
+        "ISO 27001",
+        "FFIEC CAT",
+        "DORA"
+      ]
     },
     {
-      "slug": "email-header-analyzer",
-      "bucket": "grc-tech",
-      "title": "Email Header Analyzer",
-      "summary": "email_header_analyzer.py analyzes a saved email header text file and prints a quick triage report (SPF/DKIM signals, DMARC publication status, TLS hints, and a basic From vs Return-Path alignment check). It’s…",
-      "repo_path": "grc-tech/email-header-analyzer",
-      "readme": "grc-tech/email-header-analyzer/README.md",
-      "primary_file": "grc-tech/email-header-analyzer/email_header_analyzer.py",
-      "tags": [],
-      "status": "active"
+      "id": "grc-aws-05-mfa-console-users",
+      "name": "AWS-05: MFA \u2014 Console Users",
+      "file": "aws_05_mfa_console_users.py",
+      "folder": "grc-tech/control-testing/aws-iam-programme",
+      "domain": "grc-tech/control-testing",
+      "summary": "Verify MFA is assigned to every IAM user with console access. CIS AWS 1.10.",
+      "dependencies": [
+        "boto3"
+      ],
+      "page": "https://rtapulse.com/python-encounters/control-testing/aws-mfa-console-users/",
+      "frameworks": [
+        "NIST CSF",
+        "SOX ITGC",
+        "PCI DSS",
+        "ISO 27001",
+        "FFIEC CAT",
+        "DORA"
+      ]
     },
     {
-      "slug": "file-hash-md5",
-      "bucket": "grc-tech",
-      "title": "File Hash MD5",
-      "summary": "generate_md5_hash.py computes the MD5 hash for a chosen file and writes the hash plus validation instructions to text outputs. It’s a practical integrity receipt for routine file sharing.",
-      "repo_path": "grc-tech/file-hash-md5",
-      "readme": "grc-tech/file-hash-md5/README.md",
-      "primary_file": "grc-tech/file-hash-md5/generate_md5_hash.py",
-      "tags": [],
-      "status": "active"
+      "id": "user-pst-to-eml",
+      "name": "PST to EML",
+      "file": "pst_to_eml.py",
+      "folder": "user-tech/pst-to-eml",
+      "domain": "user-tech",
+      "summary": "Convert Outlook PST archives to EML folder trees with attachments intact",
+      "dependencies": [
+        "readpst (system tool)",
+        "stdlib only"
+      ],
+      "page": "https://rtapulse.com/python-encounters/user-tech/pst-to-eml/",
+      "frameworks": [
+        "GDPR",
+        "FRCP eDiscovery",
+        "ISO 27001",
+        "DORA",
+        "SOX",
+        "SEBI"
+      ]
     },
     {
-      "slug": "net-monitor",
-      "bucket": "grc-tech",
-      "title": "Net Monitor",
-      "summary": "netmon.py captures local active network connections, enriches them with process context where available, prints a live view, and appends results to a CSV for lightweight evidence capture and troubleshooting.",
-      "repo_path": "grc-tech/net-monitor",
-      "readme": "grc-tech/net-monitor/README.md",
-      "primary_file": "grc-tech/net-monitor/netmon.py",
-      "tags": [],
-      "status": "active"
+      "id": "user-url-crawl-to-docx",
+      "name": "URL Crawl to DOCX",
+      "file": "url_crawl.py",
+      "folder": "user-tech/url-crawl-to-docx",
+      "domain": "user-tech",
+      "summary": "Crawl a website and export page text to a structured Word document",
+      "dependencies": [
+        "requests",
+        "beautifulsoup4",
+        "python-docx"
+      ],
+      "page": "https://rtapulse.com/python-encounters/user-tech/url-crawl-to-docx/",
+      "frameworks": [
+        "GDPR",
+        "ISO 27001",
+        "PCI DSS",
+        "NIST CSF",
+        "DORA",
+        "SEBI CSCRF"
+      ]
     },
     {
-      "slug": "ssl-cert-check",
-      "bucket": "grc-tech",
-      "title": "SSL Cert Check",
-      "summary": "SSLcert.py retrieves and displays SSL/TLS certificate metadata (subject/issuer/SAN/expiry) for a hostname. It is intentionally inspection-only and does not claim to enumerate supported TLS versions/ciphers.",
-      "repo_path": "grc-tech/ssl-cert-check",
-      "readme": "grc-tech/ssl-cert-check/README.md",
-      "primary_file": "grc-tech/ssl-cert-check/SSLcert.py",
-      "tags": [],
-      "status": "active"
+      "id": "fin-yfinance-export",
+      "name": "yfinance Export",
+      "file": "yf_invest.py",
+      "folder": "fin-tech/yfinance-export",
+      "domain": "fin-tech",
+      "summary": "Download historical OHLCV price data from Yahoo Finance and export to CSV",
+      "dependencies": [
+        "yfinance",
+        "pandas"
+      ],
+      "page": "https://rtapulse.com/python-encounters/financial/yfinance-export/",
+      "frameworks": [
+        "FEMA 1999",
+        "Income Tax Act 1961",
+        "SEBI",
+        "NIST CSF",
+        "ISO 27001",
+        "RBI"
+      ]
     },
     {
-      "slug": "pst-to-eml",
-      "bucket": "user-tech",
-      "title": "PST To EML",
-      "summary": "pst_to_eml.py converts an Outlook PST archive into .eml files (with attachments) using the external readpst tool, then converts extracted MBOX content into an EML folder tree.",
-      "repo_path": "user-tech/pst-to-eml",
-      "readme": "user-tech/pst-to-eml/README.md",
-      "primary_file": "user-tech/pst-to-eml/pst_to_eml.py",
-      "tags": [],
-      "status": "active"
+      "id": "fin-screener-profitloss",
+      "name": "Screener Profit/Loss Export",
+      "file": "screener.py",
+      "folder": "fin-tech/screener-profitloss-export",
+      "domain": "fin-tech",
+      "summary": "Scrape the P&L table from Screener.in for an NSE company and export as CSV",
+      "dependencies": [
+        "requests",
+        "beautifulsoup4"
+      ],
+      "page": "https://rtapulse.com/python-encounters/financial/screener-profitloss-export/",
+      "frameworks": [
+        "SEBI LODR",
+        "Companies Act 2013",
+        "FEMA 1999",
+        "NIST CSF",
+        "ISO 27001",
+        "RBI"
+      ]
     },
     {
-      "slug": "url-crawl-to-docx",
-      "bucket": "user-tech",
-      "title": "Url Crawl To DOCX",
-      "summary": "url_crawl.py crawls a website (same-domain links) and exports extracted page text into a Word document with a section per URL. Guardrails are included to prevent runaway crawls.",
-      "repo_path": "user-tech/url-crawl-to-docx",
-      "readme": "user-tech/url-crawl-to-docx/README.md",
-      "primary_file": "user-tech/url-crawl-to-docx/url_crawl.py",
-      "tags": [],
-      "status": "active"
+      "id": "fin-alphavantage-income-batch",
+      "name": "Alpha Vantage Income Batch",
+      "file": "combine_inc_stmt.py",
+      "folder": "fin-tech/alphavantage-income-batch",
+      "domain": "fin-tech",
+      "summary": "Batch-download annual income statements from Alpha Vantage API",
+      "dependencies": [
+        "requests",
+        "python-dotenv"
+      ],
+      "page": "https://rtapulse.com/python-encounters/financial/alphavantage-income-batch/",
+      "frameworks": [
+        "SEBI LODR",
+        "FEMA 1999",
+        "Income Tax Act 1961",
+        "NIST CSF",
+        "ISO 27001",
+        "RBI"
+      ]
+    },
+    {
+      "id": "fin-nse-ticker-list",
+      "name": "NSE Ticker List",
+      "file": "nsepy_list.py",
+      "folder": "fin-tech/nse-ticker-list",
+      "domain": "fin-tech",
+      "summary": "Export a dated snapshot of NSE ticker symbols and company names",
+      "dependencies": [
+        "nsepy",
+        "pandas"
+      ],
+      "page": "https://rtapulse.com/python-encounters/financial/nse-ticker-list/",
+      "frameworks": [
+        "SEBI",
+        "FEMA 1999",
+        "Income Tax Act 1961",
+        "NIST CSF",
+        "ISO 27001",
+        "RBI"
+      ]
     }
   ]
 }
